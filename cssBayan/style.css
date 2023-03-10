@@ -12,9 +12,11 @@ body{
 div{
     color: rgb(103, 32, 180);
 }
-div:hover{
-    color: black;
+
+summary{
+ display: block
 }
+
 details{
     font-size: 4vmin;
     border-top: outset black;
@@ -38,10 +40,7 @@ img{
     width: 60%;  
     animation: opening 3s;
 }
-img:hover{
-    height: 65%;
-    width: 65%;
-}
+
 
 details:active{
     transition: 0.3s;
@@ -57,4 +56,38 @@ details:active{
     }
 }
 
+details:checked ~ img{
+    max-height: 100vh;
+    transition: max-height 1s ease-out;
+}
+.wow:hover ~ img{
+    max-height: 100vh;
+    transition: max-height 1s ease-out;
+}
 
+
+@media(hover: hover){
+    img:hover{
+        height: 62%;
+        width: 62%;
+    }
+    .wrap:hover{
+        color:black
+    }
+    .wrap:hover summary{
+        display:list-item;
+    }
+}
+
+@media(hover: none){
+    img:active{
+        height: 62%;
+        width: 62%;
+    }
+    .wrap:active{
+        color:black
+    }
+    .wrap:active summary{
+        display:list-item;
+    }
+}
