@@ -20,7 +20,7 @@ details{
     border-top: outset black;
     cursor: pointer;
     padding: 0.5em 0;
-    transition: 0.1s ;
+    transition: 0.2s ;
     max-height: 200px;
     overflow: hidden;
 }
@@ -29,16 +29,18 @@ details[open]{
     color: black ;
     max-height: 500px;
 }
-::marker{
-    display: none;
-}
+
 img{
     padding: 0.8em 0;
     display: block;
     margin: auto;
-    height: 70%;
-    width: 70%;  
-    animation: opening 1s;
+    height: 60%;
+    width: 60%;  
+    animation: opening 3s;
+}
+img:hover{
+    height: 65%;
+    width: 65%;
 }
 
 details:active{
@@ -48,16 +50,11 @@ details:active{
 }
 @keyframes opening {
     0%{
-        height:10%
+        opacity: 0;
     }
     100%{
-        height: 100%;
+        opacity: 1;
     }
 }
-.memas1{
-    display: none;
-}
-details:hover .memas1 {
-    display: block;}
 
 
