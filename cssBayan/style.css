@@ -1,5 +1,5 @@
 h1{
-    font-size: 10vmin;    
+    font-size: 8vmin;    
 }
 body{
     height: 50%;
@@ -16,21 +16,29 @@ div:hover{
     color: black;
 }
 details{
-    font-size: 5vmin;
+    font-size: 4vmin;
     border-top: outset black;
     cursor: pointer;
     padding: 0.5em 0;
+    transition: 0.1s ;
+    max-height: 200px;
+    overflow: hidden;
 }
 
 details[open]{
     color: black ;
+    max-height: 500px;
+}
+::marker{
+    display: none;
 }
 img{
     padding: 0.8em 0;
     display: block;
     margin: auto;
     height: 70%;
-    width: 70%;    
+    width: 70%;  
+    animation: opening 1s;
 }
 
 details:active{
@@ -38,4 +46,18 @@ details:active{
     color: rgb(103, 32, 180);
     opacity: 80%;
 }
+@keyframes opening {
+    0%{
+        height:10%
+    }
+    100%{
+        height: 100%;
+    }
+}
+.memas1{
+    display: none;
+}
+details:hover .memas1 {
+    display: block;}
+
 
